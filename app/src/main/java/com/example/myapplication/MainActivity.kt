@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.adapter.Adapter
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.model.Post
 import com.example.myapplication.model.PokemonListResponse
@@ -61,7 +62,6 @@ class MainActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<PokemonListResponse>, t: Throwable) {
                 Log.e("API_FAILURE", "API call failed: ${t.message}", t)
-                // Considera di mostrare un messaggio all'utente qui
             }
         })
     }
