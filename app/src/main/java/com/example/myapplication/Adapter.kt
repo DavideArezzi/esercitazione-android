@@ -22,7 +22,6 @@ class Adapter(private val listPost: List<Post>) : RecyclerView.Adapter<Adapter.V
         val post = listPost[position]
         holder.name.text = post.name
         holder.itemView.setOnClickListener {
-            // Aggiungi qui la logica per il click se necessario
         }
     }
 

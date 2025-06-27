@@ -28,8 +28,7 @@ class MainActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        val api = retrofit.create(com.example.myapplication.ApiClient::class.java) // Qualifica completa per chiarezza, se necessario
-
+        val api = retrofit.create(ApiClient::class.java)
         val call: Call<PokemonListResponse> = api.getPosts(limit = 20, offset = 0)
 
         call.enqueue(object : Callback<PokemonListResponse> {
